@@ -19,20 +19,20 @@ import com.zero.maze.service.MazeService;
 @RequestMapping(value = "/maze")
 @CrossOrigin
 public class MazeController {
-	
-	@Autowired
-	private MazeService mazeService;
-	
-	@GetMapping(value = "/getMaze")
-	@ResponseBody
-	public BaseResultDto<MazeDto> getMaze(@RequestParam Integer row, @RequestParam Integer col, 
-			@RequestParam(required = false) Integer pattern) {
-		return mazeService.getMaze(row, col, pattern);
-	}
-	
-	@GetMapping(value = "/getMazePath")
-	@ResponseBody
-	public LinkedList<Coordinate> getMazePath(@RequestParam int[][] mazeMap, @RequestParam int row, @RequestParam int col) {
-		return mazeService.getMazePath(mazeMap, row, col);
-	}
+    
+    @Autowired
+    private MazeService mazeService;
+    
+    @GetMapping(value = "/getMaze")
+    @ResponseBody
+    public BaseResultDto<MazeDto> getMaze(@RequestParam Integer row, @RequestParam Integer col, 
+            @RequestParam(required = false) Integer pattern) {
+        return mazeService.getMaze(row, col, pattern);
+    }
+    
+    @GetMapping(value = "/getMazePath")
+    @ResponseBody
+    public LinkedList<Coordinate> getMazePath(@RequestParam int[][] mazeMap, @RequestParam int row, @RequestParam int col) {
+        return mazeService.getMazePath(mazeMap, row, col);
+    }
 }

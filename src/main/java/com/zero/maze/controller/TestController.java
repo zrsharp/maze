@@ -15,17 +15,17 @@ import com.zero.maze.service.PlayerService;
 @RequestMapping("/")
 public class TestController {
 
-	@Autowired
-	MazeService mazeService;
-	
-	@Autowired
-	PlayerService playerService;
-	
-	@RequestMapping("/test")
-	@ResponseBody
-	@CrossOrigin
-	public void test() {
-		Maze maze = MazeFactory.getInstance().createMaze(35, 40, 2);
-		maze.printMazeMap();
-	}
+    @Autowired
+    MazeService mazeService;
+    
+    @Autowired
+    PlayerService playerService;
+    
+    @RequestMapping("/test")
+    @ResponseBody
+    @CrossOrigin
+    public void test() {
+        Maze maze = MazeFactory.getInstance().createMaze(35, 40, 2);
+        maze.printMazeMap();
+    }
 }
