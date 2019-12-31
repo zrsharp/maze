@@ -1,0 +1,38 @@
+@charset "utf-8";
+/* CSS Document */
+#changeBackground {
+	position: relative;
+}
+
+#changeBackground {
+	position: absolute;
+	right: 0;
+}
+
+html, body {
+	height: 100%;
+	margin: 0;
+}
+
+#backImg {
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	position: fixed;
+	z-index: -1101;
+}
+
+#main_area {
+	width: 70%;
+	height: 450px;
+	border-radius: 20px;
+	background-color: rgba(255, 255, 255, 0.5);
+	/*box-shadow: -1px 1px 1px 1px red;*/
+	margin: 60px auto;
+	position: relative;
+}
+
+.white-text {
+	color: white;
+}
